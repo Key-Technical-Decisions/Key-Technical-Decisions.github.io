@@ -1,0 +1,162 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features from '~/components/widgets/Features.astro';
+
+import { YouTube } from 'astro-embed';
+
+const metadata = {
+  title: 'Key Technical Decisions - Free resources to download',
+  ignoreTitleTemplate: true,
+};
+---
+<Layout metadata={metadata}>
+
+  <Hero2
+tagline="DrupalCon EU Lille 2023"
+actions={[
+  {
+    variant: 'primary',
+    target: '_blank',
+    text: 'Get slides',
+    href: '/files/Drupalcon EU 2023 - The only permanence is change.pdf',
+    icon: 'tabler:download',
+  },
+  { text: 'Check out the event!', target: '_blank', href: 'https://events.drupal.org/lille2023/session/only-permanence-change-how-drive-key-technical-decisions-while-implementing' },
+]}
+>
+<Fragment slot="title">
+  The only permanence is change
+</Fragment>
+
+<Fragment slot="subtitle">
+  How to drive key technical decisions while implementing composable digital experience platforms in a constant state of flux.<br />By <a href="https://www.linkedin.com/in/koutlas/" class="underline">Tassos Koutlas</a> on 18/10/2023.
+</Fragment>
+
+<Fragment slot="image">
+  <YouTube id="GkO9oAnEA1M" title="KTD framework just introduced in society.... Could it be the ultimate decisions framework?" />
+  <style is:inline>
+    lite-youtube {
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  </style>
+</Fragment>
+</Hero2>
+
+<Features
+  tagline="Other events"
+  title="Key Technical Decision framework <br /> presentation slides"
+  subtitle=""
+  items={[
+    {
+      title: 'DrupalCamp Berlin 2024',
+      description:
+        '<a href="https://drupalcamp.berlin/en/schedule#key-technical-decisions-framework" class="underline" target="_blank">Speaker session</a>, expanding the knowledge around the KTD framework.<br />By <a href="https://www.linkedin.com/in/enyilmaz/" class="underline">Engin Yilmaz</a> on 8/11/2024.',
+      icon: '',
+      callToAction:{
+        variant: 'primary',
+        target: '_blank',
+        text: 'Get slides',
+        href: '/files/KTD - DrupalCamp_Berlin_Presentation.pdf',
+        icon: 'tabler:download',
+      },
+    },
+    {
+      title: 'DrupalCon EU Barcelona 2024',
+      description:
+        '<a href="https://events.drupal.org/barcelona2024/session/key-technical-decisions-framework" class="underline" target="_blank">Birds of a Feather session</a>, marking the release of the KTD framework as Open Source.<br />By <a href="https://www.linkedin.com/in/jorgelopezlago/" class="underline">Jorge López-Lago</a> on 25/9/2024.',
+      icon: '',
+      callToAction:{
+        variant: 'primary',
+        target: '_blank',
+        text: 'Get slides',
+        href: '/files/DrupalCon EU 2024 - KTD (BOF).pdf',
+        icon: 'tabler:download',
+      },
+    },
+  ]}
+/>
+
+  <Features2
+  title="Downloadable templates"
+  subtitle="Document templates for Key Technical Decisions. Download the one that best fits your tools."
+  items={[
+    {
+      title: 'Google doc',
+      description:
+        'Google document format. It contains dropdown elements for the tag labels already formatted. This is the base document from which all the others are generated.',
+      icon: 'tabler:brand-google-drive',
+      callToAction:{
+        variant: 'tertiary',
+        target: '_blank',
+        text: 'Open template',
+        href: 'https://docs.google.com/document/d/1gnd3Oo9jtAv1CcBgbKc38YLcMhrY0hZCrfVnGreJEbc/edit?usp=sharing',
+        icon: 'tabler:external-link',
+      },
+    },
+    {
+      title: 'HTML plain',
+      description:
+        'HTML document with minimum formatting and clean code. Its purpose is to adapt it to any system that uses HTML templates.',
+      icon: 'tabler:file-type-html',
+      callToAction:{
+        variant: 'tertiary',
+        target: '_blank',
+        text: 'Download template',
+        href: '/files/KTD000Titleordescriptivename.zip',
+        icon: 'tabler:download',
+      },
+    },
+    {
+      title: 'Open Document format',
+      description:
+        'ODT file for Libre Office. I has dropdowns for the tag choices, but no color formatting. It has been exported from the Google document.',
+      icon: 'tabler:file-type-doc',
+      callToAction:{
+        variant: 'tertiary',
+        text: 'Download template',
+        href: '/files/KTD-000 Title or descriptive name.odt',
+        icon: 'tabler:download',
+      },
+    },
+    {
+      title: 'Microsoft Word 2007',
+      description:
+        'DOCX file for Microsoft Office. It has been exported from the Google document.',
+      icon: 'tabler:file-type-docx',
+      callToAction:{
+        variant: 'tertiary',
+        target: '_blank',
+        text: 'Download template',
+        href: '/files/KTD-000 Title or descriptive name.docx',
+        icon: 'tabler:download',
+      },
+    },
+    {
+      title: 'Markdown',
+      description:
+        'Markdown file without any styling. It has no dropdown elements or lists for the tag labels.',
+      icon: 'tabler:markdown',
+      callToAction:{
+        variant: 'tertiary',
+        target: '_blank',
+        text: 'Open template',
+        href: '/files/KTD-000 Title or descriptive name.md',
+        icon: 'tabler:external-link',
+      },
+    },
+  ]}
+  >
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+
+  </Features2>
+
+
+
+
+</Layout>

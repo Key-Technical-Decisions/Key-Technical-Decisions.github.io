@@ -1,0 +1,33 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+
+const metadata = {
+  title: 'Key Technical Decisions - Contact us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+  <Hero
+    tagline=""
+    actions={[
+      {
+        variant: 'primary',
+        target: '_blank',
+        text: 'Email us!',
+        href: 'mailto:key.technical.decisions@gmail.com',
+        icon: 'tabler:mail',
+      },
+    ]}
+  >
+  <Fragment slot="title">
+    Contact us
+  </Fragment>
+
+  <Fragment slot="subtitle">
+    <div class="text-xl text-muted mb-6 dark:text-slate-300 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade text-center">Send us an email with your questions.</div>
+  </Fragment>
+</Hero>
+
+</Layout>
