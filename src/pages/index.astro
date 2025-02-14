@@ -1,0 +1,265 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content2 from '~/components/widgets/Content2.astro';
+
+const metadata = {
+  title: 'Key Technical Decisions - Open Source Framework for Strategic Decision-Making',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+  <Hero>
+    <Fragment slot="title">
+      What are Key Technical Decisions?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span>Key Technical Decisions (KTDs) are strategic choices that shape an organization’s architecture and long-term direction.</span><br/>
+
+      They <span class="font-semibold">enable or hinder</span> strategic goals such as evolution, growth, and value creation.<br/>
+      KTDs provide a <span class="font-semibold">structured, consensus-driven approach</span> to consulting and decision-making.<br/>
+      Widely recognized and valued by teams and clients, they foster <span class="font-semibold">collaboration and alignment</span> across stakeholders.<br/>
+      While the process may feel unfamiliar at first, its <span class="font-semibold">collaborative nature</span> ultimately leads to better, well-informed decisions.<br/>
+    </Fragment>
+  </Hero>
+
+  <!-- Features2 Widget ************** -->
+  <Features2
+    title="Our mission"
+    subtitle="We empower organizations to expand, support, and sustain their technical architecture and platforms, navigating an evolving technological landscape in a continuously growing business environment."
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Features Widget *************** -->
+  <Features
+    id="benefits"
+    tagline="Benefits"
+    title="What you get with KTDs"
+    subtitle=""
+    items={[
+      {
+        title: 'Strategic Tech Alignment',
+        description:
+          'KTDs help organizations align their technology stack with their business vision, ensuring technical choices support long-term goals.',
+        icon: 'tabler:adjustments-alt',
+      },
+      {
+        title: 'Inclusive Decision-Making',
+        description:
+          'KTDs enable stakeholder participation through a simple process, ensuring all business needs are considered when making key technical decisions.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Smart Solution Exploration',
+        description:
+          'KTDs facilitate multiple solution explorations before committing to a technical path, reducing the risk of costly misaligned choices.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Clarity & Consensus',
+        description:
+          'KTDs define context, landscape, and challenges clearly, fostering alignment and consensus with a shared understanding of trade-offs.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Transparent Decision History',
+        description:
+          "KTDs provide a clear audit trail for technical decisions, making it easy to understand the rationale behind each choice over time.",
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Adaptive Governance',
+        description:
+          'KTDs establish a lightweight governance framework that allows technical architectures to evolve with new business needs, enabling sustained growth.',
+        icon: 'tabler:arrows-shuffle',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content2
+    isReversed
+    id="audience"
+    tagline="Audience"
+    title="How everyone benefits from KTDs"
+    items={[
+      {
+        title: 'Optimized Technical & Cost Efficiency',
+        description:
+          'Enterprise systems are complex and costly, with slow and expensive iterations. KTDs provide a structured framework to streamline decision-making, ensuring technical choices—whether for scalability, integration, or security—are precise and resource-efficient.',
+      },
+      {
+        title: 'Stakeholder Alignment & Governance',
+        description:
+          'Unifying stakeholders and integrating diverse requirements can be challenging. KTDs facilitate structured discussions, ensuring all voices contribute meaningfully while minimizing distractions. By establishing governance and ownership over strategic technical planning, KTDs create a single source of truth, eliminating future confusion and ensuring well-reasoned decisions.',
+      },
+      {
+        title: 'Balancing Innovation & Stability',
+        description:
+          'Organizations must balance the pursuit of innovation with the need for reliable systems. As more departments introduce new technologies, the IT landscape grows increasingly complex. KTDs provide a structured yet accessible process to evaluate and integrate new solutions while maintaining system stability and alignment across teams.',
+      },
+      {
+        title: 'Context-Driven Strategic Decisions',
+        description:
+          'Neglecting the broader business, technical, and political context when making technical decisions leads to an unmanageable IT landscape. KTDs ensure strategic decisions consider the full organizational context, aligning infrastructure and platforms with long-term business needs.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">CIOs/CTOs</h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content2>
+
+  <!-- Content Widget **************** -->
+
+  <Content2
+    isAfterContent
+    items={[
+      {
+        title: 'Aligning Technical & Business Goals',
+        description: "KTDs ensure that technical architecture supports departmental objectives, fostering alignment across stakeholders. They create a true two-way communication channel, allowing stakeholders to influence architectural decisions.",
+      },
+      {
+        title: 'Eliminating Technical Silos',
+        description:
+          'Rogue technical solutions can lead to isolated systems that hinder collaboration. KTDs prevent silos by incorporating stakeholder requirements into the architectural framework, ensuring seamless integration and shared ownership.',
+      },
+      {
+        title: 'Bridging Communication Gaps',
+        description:
+          "Effective collaboration between IT and other teams is critical for success. KTDs facilitate structured, transparent communication, ensuring that technical decisions are understood and supported across the organization.",
+      },
+    ]}
+  >
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">CMOs/CDOs</h3>
+  </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content2>
+
+  <!-- Content Widget **************** -->
+
+  <Content2
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Transparent Technology Selection',
+        description:
+          'Understanding past technical decisions can be challenging without proper documentation. KTDs create a structured, well-reasoned record, serving as a blueprint for technical architecture and ensuring long-term clarity and continuity.',
+      },
+      {
+        title: 'Minimizing Technical Debt',
+        description:
+          'Unchecked technical debt can hinder innovation. KTDs help maintain architectural integrity by aligning new features and improvements with business constraints, ensuring sustainable growth without unnecessary complexity.',
+      },
+      {
+        title: 'Structured Change Management',
+        description:
+          'Managing evolving architectures requires historical context. KTDs document the rationale behind technical decisions, enabling seamless adaptation while ensuring alignment with business goals.',
+      },
+      {
+        title: 'Bridging Knowledge Gaps',
+        description: "Onboarding new team members and managing transitions can disrupt continuity. KTDs provide a comprehensive record of architectural decisions, preserving institutional knowledge and ensuring smooth transitions for both newcomers and departing team members.",
+      },
+    ]}
+  >
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Architects</h3>
+  </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content2>
+
+    <!-- Content Widget **************** -->
+
+    <Content2
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Aligning Technical Strategy with Business Priorities',
+        description:
+          'Development and business teams often operate in silos, leading to misalignment. KTDs document the business rationale behind technical decisions, providing stakeholders with a broader perspective beyond tactical choices.',
+      },
+      {
+        title: 'Establishing Ownership & Transparency',
+        description:
+          'Unclear business requirements can lead to a lack of ownership in development. KTDs ensure transparency by documenting technical decisions, the reasoning behind them, and the constraints shaping the architecture, fostering accountability.',
+      },
+      {
+        title: 'Ensuring Implementation Consistency',
+        description:
+          'Adhering to architectural guidelines requires more than just specifications—it demands context. KTDs provide structured standards with rationale, helping teams confidently develop solutions while understanding when changes are necessary.',
+      },
+    ]}
+  >
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Developers</h3>
+  </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content2>
+
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
+    <div class="text-center pb-12">
+        <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+            Contributors
+        </p>
+        <h2 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+            Check out our champions
+        </h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div class="mb-8">
+              <a href="https://www.linkedin.com/in/koutlas/"><img class="object-center object-cover rounded-full h-36 w-36" src="/assets/tassos.jpeg" alt="photo of Tassos"></a>
+            </div>
+            <div class="text-center">
+                <p class="text-xl text-gray-700 font-bold mb-2">Tassos Koutlas</p>
+                <p class="text-base text-gray-400 font-normal">Solutions Architect</p>
+            </div>
+        </div>
+        <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div class="mb-8">
+              <a href="https://www.linkedin.com/in/jorgelopezlago/"><img class="object-center object-cover rounded-full h-36 w-36" src="/assets/jorge.jpeg" alt="photo of Jorge"></a>
+            </div>
+            <div class="text-center">
+                <p class="text-xl text-gray-700 font-bold mb-2">Jorge López-Lago</p>
+                <p class="text-base text-gray-400 font-normal">Solutions Architect</p>
+            </div>
+        </div>
+        <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div class="mb-8">
+                <a href="https://www.linkedin.com/in/enyilmaz/"><img class="object-center object-cover rounded-full h-36 w-36" src="/assets/engin.jpeg" alt="photo of Engin"></a>
+            </div>
+            <div class="text-center">
+                <p class="text-xl text-gray-700 font-bold mb-2">Engin Yilmaz</p>
+                <p class="text-base text-gray-400 font-normal">Solutions Architect</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</Layout>
