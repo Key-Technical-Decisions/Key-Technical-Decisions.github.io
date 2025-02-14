@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://key-technical-decisions.github.io/sitemap-index.xml
